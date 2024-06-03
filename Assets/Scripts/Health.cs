@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    Score score;
     [SerializeField] int HP;
+    [SerializeField] bool isPlayer = false;
 
+    private void Start() {
+        score = FindObjectOfType<Score>();
+    }
     public void takeDamage(){
         HP -= 100;
         if(HP == 0){
+            score.updateScore(1);
             Destroy(gameObject);
         }
         Debug.Log("callled" + HP);
