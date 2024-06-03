@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class EndGameMenu : MonoBehaviour
 {
-    public void startGame(){
-        SceneManager.LoadSceneAsync(1);
+    public void mainMenu(){
+        SceneManager.LoadSceneAsync(0);
     }
     public void endGame(){
         Application.Quit();
