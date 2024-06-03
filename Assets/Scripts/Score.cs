@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Score : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
-    int score = 0;
+    public int score = 0;
 
     private void Update() {
         showScore();
@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
 
     private void EndGame()
     {
-        if(score >=5){
+        if(score >= 4000){
             SceneManager.LoadSceneAsync("End Game Menu");
         }
     }
